@@ -10,10 +10,6 @@ public class student implements prototype{
     private double batchPsp;
     private double pspFraction;
 
-    void student(student st){
-        ;
-
-    }
 
     public double getPspFraction() {
         this.pspFraction = this.psp/this.batchPsp;
@@ -37,7 +33,7 @@ public class student implements prototype{
     public double getPsp() {
         return psp;
     }
-    public void setPsp(int psp) {
+    public void setPsp(double psp) {
         this.psp = psp;
     }
     public String getBatch() {
@@ -49,7 +45,7 @@ public class student implements prototype{
     public double getBatchPsp() {
         return batchPsp;
     }
-    public void setBatchPsp(int batchPsp) {
+    public void setBatchPsp(double batchPsp) {
         this.batchPsp = batchPsp;
     }
     @Override
