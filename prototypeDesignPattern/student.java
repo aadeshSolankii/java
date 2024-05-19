@@ -1,7 +1,7 @@
 
 package prototypeDesignPattern;
 
-public class student{
+public class student implements prototype{
 
     private String name;
     private int age;
@@ -9,6 +9,11 @@ public class student{
     private String batch;
     private double batchPsp;
     private double pspFraction;
+
+    void student(student st){
+        ;
+
+    }
 
     public double getPspFraction() {
         this.pspFraction = this.psp/this.batchPsp;
@@ -46,6 +51,15 @@ public class student{
     }
     public void setBatchPsp(int batchPsp) {
         this.batchPsp = batchPsp;
+    }
+    @Override
+    public student getClone() {
+        // TODO Auto-generated method stub
+        student st = new student();
+        st.batch = this.batch;
+        st.batchPsp = this.batchPsp;
+
+        return st;
     }
 
 
