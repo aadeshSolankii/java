@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "stackOp",
+            "request": "launch",
+            "mainClass": "stacks.stackOp",
+            "projectName": "java_6c0f40ea"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
