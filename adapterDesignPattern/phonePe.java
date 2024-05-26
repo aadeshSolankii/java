@@ -11,12 +11,12 @@ class phonePe {
         bankingInterfaces bk = new hdfc();
         bk.createAccount();
         bk.createAccount();
-        bk.checkBalance();
+        //bk.checkBalance();
         bk.addMoney();
-        bk.addMoney();
+        //bk.addMoney();
         bk.checkBalance();
-        bk.addMoney();
-        bk.checkBalance();
+        //bk.addMoney();
+        //bk.checkBalance();
         // bk.addMoney(42.44603212453881, 45.7);
         // bk.checkBalance(42.44603212453881);
         
