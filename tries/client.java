@@ -13,12 +13,12 @@ public class client {
         System.out.println(trie.doesWordExist("alg"));
         System.out.println(trie.doesWordExist("bat"));
 
-        System.out.println(trie.numberOfWords);
+        System.out.println(trie.getNumberOfWords());
 
         System.out.println(trie.getPrefixCount("al"));
         System.out.println(trie.getPrefixCount("baT"));
         System.out.println(trie.getPrefixCount("alg"));
-        System.out.println(trie.getPrefixCount("a"));
+        System.out.println(trie.getPrefixCount("al"));
     }
 
 }
