@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "client",
+            "request": "launch",
+            "mainClass": "tries.client",
+            "projectName": "java_6c0f40ea"
+        },
+        {
+            "type": "java",
             "name": "phonePe",
             "request": "launch",
             "mainClass": "adapterDesignPattern.phonePe",
