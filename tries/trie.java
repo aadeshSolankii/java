@@ -4,22 +4,29 @@ package tries;
 public class trie {
 
     static trieNode rootNode = new trieNode();
+    static int numberOfWords;
 
 
-    public static void enterWord(String word){
+    public static void addWord(String word){
 
         char[] currWordInArray = word.toUpperCase().toCharArray();
+
+        numberOfWords += 1;
         
         trieNode temp = rootNode;
         for( int i = 0; i < currWordInArray.length; i++ ){
             
             if ( temp.charExists( currWordInArray[i] ) )  {
+                
                 temp = temp.nextCharDict.get( currWordInArray[i] );
+                temp.prefixCount++;
+                
             }
             else{
 
                 trieNode newTrieNode = new trieNode();
                 newTrieNode.currChar = currWordInArray[i];
+                newTrieNode.prefixCount = 1;
 
                 temp.nextCharDict.put(currWordInArray[i], newTrieNode);
                 temp = newTrieNode;
@@ -68,6 +75,28 @@ public class trie {
         }
 
         return flag;
+    }
+
+    public static int getNumberOfWords(){
+        return numberOfWords;
+    }
+
+    public static int getPrefixCount(String prefix){
+
+        char[] prefixInArray = prefix.toUpperCase().toCharArray();
+
+        trieNode temp = rootNode;
+
+        for( int i = 0; i < prefixInArray.length; i++ ){
+
+            if ( temp.nextCharDict.get( prefixInArray[i] ) != null ) {
+                temp = temp.nextCharDict.get(prefixInArray[i]);
+            } 
+
+        }
+
+        return temp.prefixCount;
+
     }
 
 }

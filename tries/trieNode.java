@@ -7,6 +7,7 @@ public class trieNode {
     char currChar;
     HashMap <Character, trieNode> nextCharDict = new HashMap<>();
     boolean isEndOfValidWord;
+    int prefixCount = 0;
 
     public boolean charExists( char ch){
 
