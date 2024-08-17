@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "creatingMultipleThreads",
+            "request": "launch",
+            "mainClass": "threading.creatingMultipleThreads",
+            "projectName": "java_6c0f40ea"
+        },
+        {
+            "type": "java",
+            "name": "threads",
+            "request": "launch",
+            "mainClass": "threading.threads",
+            "projectName": "java_6c0f40ea"
+        },
+        {
+            "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "test.test",
+            "projectName": "java_6c0f40ea"
+        },
+        {
+            "type": "java",
             "name": "client",
             "request": "launch",
             "mainClass": "tries.client",
